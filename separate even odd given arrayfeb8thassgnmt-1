@@ -1,0 +1,36 @@
+/*s sivadurga awdc_kkd assignment-1*/
+#include<stdio.h>
+void separate(int a[],int n);
+int main(){
+   int n, i, a[20], even[20], odd[20];
+   int Ecount = 0, Ocount = 0;
+   printf("enter size of array :\n");
+   scanf("%d", &n);
+   printf("enter array elements:\n");
+   for(i = 0; i < n; i++)
+   {
+      scanf("%d", &a[i]);
+   }
+   for(i = 0; i < n; i ++)
+   {
+      if(a[i] % 2 == 0)
+      {
+         even[Ecount] = a[i];
+         Ecount++;
+      }
+      else{
+         odd[Ocount] = a[i];
+         Ocount++;
+      }
+   }
+   separate(odd,Ocount);
+      printf("\t");
+   separate(even,Ecount);
+   return 0;
+}
+void separate(int a[], int n){
+   int i;
+   for(i = 0; i < n; i++){
+      printf("%d ", a[i]);
+   }
+}
