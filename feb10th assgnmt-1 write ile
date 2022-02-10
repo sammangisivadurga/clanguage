@@ -1,0 +1,20 @@
+/*s sivadurga awdc_kkd assignment-1*/
+#include <stdio.h>
+
+int main()
+{
+    FILE *f;
+    char ch[50];
+    int n,i;
+    char c;
+    printf("enter file");
+    scanf("%s",&ch);
+    f=fopen("ch","r");
+    c=getc(f);
+    while(c!=EOF)
+    {
+        printf("%c",c);
+        c=fclose(f);
+        return 0;
+    }
+}    
